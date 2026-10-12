@@ -48,7 +48,6 @@ summary:focus-visible {
   text-transform: uppercase;
 }
 
-.role,
 .section-label,
 .featured-project summary,
 .project-facts dd,
@@ -57,13 +56,6 @@ footer {
   font-family: var(--mono);
   letter-spacing: .13em;
   text-transform: uppercase;
-}
-
-.role {
-  margin: 14px 0 0;
-  color: #3f4f5b;
-  font-size: clamp(.8rem, 1.5vw, 1.05rem);
-  line-height: 1.5;
 }
 
 .accent-line {
@@ -114,10 +106,10 @@ footer {
 
 .featured-project summary {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  min-height: 66px;
-  padding: 14px 2px;
+  gap: clamp(28px, 6vw, 80px);
+  padding: 28px 2px 30px;
   cursor: pointer;
   color: #40505b;
   font-size: .8rem;
@@ -127,10 +119,42 @@ footer {
 .featured-project summary::-webkit-details-marker { display: none; }
 .featured-project summary b { color: var(--coral); }
 
+.summary-copy {
+  display: grid;
+  gap: 13px;
+  max-width: 850px;
+}
+
+.summary-meta {
+  font-size: .8rem;
+}
+
+.summary-intro,
+.summary-note {
+  color: var(--ink);
+  font-family: var(--mono);
+  letter-spacing: 0;
+  line-height: 1.55;
+  text-transform: none;
+}
+
+.summary-intro { font-size: clamp(.98rem, 1.6vw, 1.12rem); }
+.summary-note { color: var(--muted); font-size: .88rem; }
+
+.summary-intro a {
+  color: var(--blue);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.summary-intro a:hover { color: var(--coral); }
+
 .summary-action {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
   gap: 12px;
+  padding-top: 1px;
   color: var(--ink);
 }
 
@@ -178,6 +202,13 @@ footer {
   font-size: 1.05rem;
   line-height: 1.55;
 }
+
+.project-deck a {
+  color: var(--blue);
+  text-underline-offset: 4px;
+}
+
+.project-deck a:hover { color: var(--coral); }
 
 .project-facts {
   display: flex;
@@ -313,8 +344,7 @@ footer p { margin: 0; }
 @media (max-width: 680px) {
   .page-shell { width: min(100% - 30px, 1240px); padding-top: 42px; }
   .intro h1 { font-size: clamp(2.4rem, 12vw, 3.4rem); }
-  .role { max-width: 330px; }
-  .featured-project summary { align-items: flex-start; gap: 18px; }
+  .featured-project summary { gap: 18px; padding-block: 24px 26px; }
   .summary-action { font-size: 0; }
   .summary-action i { margin-top: 4px; }
   .project-body { padding-bottom: 42px; }
