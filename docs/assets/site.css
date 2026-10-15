@@ -98,10 +98,36 @@ footer {
   text-transform: none;
 }
 
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.social-links a {
+  color: var(--blue);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.social-links a:hover { color: var(--coral); }
+
 .featured-project {
   margin-top: clamp(54px, 7vw, 80px);
   border-top: 1.5px solid var(--rule);
   border-bottom: 1.5px solid var(--rule);
+}
+
+.featured-project + .featured-project {
+  margin-top: 0;
+  border-top: 0;
 }
 
 .featured-project summary {
@@ -141,13 +167,15 @@ footer {
 .summary-intro { font-size: clamp(.98rem, 1.6vw, 1.12rem); }
 .summary-note { color: var(--muted); font-size: .88rem; }
 
-.summary-intro a {
+.summary-intro a,
+.summary-note a {
   color: var(--blue);
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
 
-.summary-intro a:hover { color: var(--coral); }
+.summary-intro a:hover,
+.summary-note a:hover { color: var(--coral); }
 
 .summary-action {
   display: inline-flex;
@@ -193,6 +221,10 @@ footer {
   line-height: .86;
   letter-spacing: -.07em;
   text-transform: uppercase;
+}
+
+.project-copy h2.project-title-long {
+  font-size: clamp(2.75rem, 4.7vw, 4.2rem);
 }
 
 .project-deck {

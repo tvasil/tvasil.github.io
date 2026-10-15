@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Tania Vasilikioti
-description: Senior Data Scientist and Data Science Leader. Projects, public talks, and experiments.
+description: Experienced data scientist and data leader. Projects, public talks, and experiments.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tvasil.github.io"
 twitter_username: tvasi
