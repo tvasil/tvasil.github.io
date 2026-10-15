@@ -38,7 +38,7 @@ summary:focus-visible {
   padding: clamp(48px, 8vw, 96px) 0 32px;
 }
 
-.intro { max-width: 880px; }
+.intro { width: 100%; }
 
 .intro h1 {
   margin: 0;
@@ -68,7 +68,6 @@ footer {
 }
 
 .bio {
-  max-width: 790px;
   margin: 22px 0 0;
   font-family: var(--mono);
   font-size: clamp(1rem, 2vw, 1.25rem);
@@ -135,7 +134,7 @@ footer {
   align-items: flex-start;
   justify-content: space-between;
   gap: clamp(28px, 6vw, 80px);
-  padding: 28px 2px 30px;
+  padding: 22px 2px 24px;
   cursor: pointer;
   color: #40505b;
   font-size: .8rem;
@@ -147,8 +146,8 @@ footer {
 
 .summary-copy {
   display: grid;
-  gap: 13px;
-  max-width: 850px;
+  gap: 10px;
+  max-width: 960px;
 }
 
 .summary-meta {
@@ -164,7 +163,7 @@ footer {
   text-transform: none;
 }
 
-.summary-intro { font-size: clamp(.98rem, 1.6vw, 1.12rem); }
+.summary-intro { font-size: clamp(.86rem, 1.25vw, .98rem); }
 .summary-note { color: var(--muted); font-size: .88rem; }
 
 .summary-intro a,
