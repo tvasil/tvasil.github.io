@@ -130,6 +130,7 @@ footer {
 }
 
 .featured-project summary {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -146,13 +147,18 @@ footer {
 
 .summary-copy {
   display: grid;
+  flex: 1;
   gap: 10px;
-  max-width: 960px;
+  min-width: 0;
+  width: 100%;
 }
 
 .summary-meta {
   font-size: .8rem;
 }
+
+.summary-meta,
+.summary-intro { padding-right: 190px; }
 
 .summary-intro,
 .summary-note {
@@ -166,6 +172,30 @@ footer {
 .summary-intro { font-size: clamp(.86rem, 1.25vw, .98rem); }
 .summary-note { color: var(--muted); font-size: .88rem; }
 
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  margin-top: -5px;
+  font-family: var(--mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.project-tag {
+  display: inline-flex;
+  padding: 5px 9px;
+  border: 1px solid #aab8a6;
+  border-radius: 6px;
+  background: #e5ebe1;
+  color: #49604e;
+  font-size: .64rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .summary-intro a,
 .summary-note a {
   color: var(--blue);
@@ -177,6 +207,9 @@ footer {
 .summary-note a:hover { color: var(--coral); }
 
 .summary-action {
+  position: absolute;
+  top: 23px;
+  right: 2px;
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
@@ -376,6 +409,9 @@ footer p { margin: 0; }
   .page-shell { width: min(100% - 30px, 1240px); padding-top: 42px; }
   .intro h1 { font-size: clamp(2.4rem, 12vw, 3.4rem); }
   .featured-project summary { gap: 18px; padding-block: 24px 26px; }
+  .summary-meta,
+  .summary-intro { padding-right: 36px; }
+  .summary-action { top: 25px; }
   .summary-action { font-size: 0; }
   .summary-action i { margin-top: 4px; }
   .project-body { padding-bottom: 42px; }
